@@ -1,0 +1,156 @@
+
+.popbox{
+	position:fixed;
+	display:none;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.80);
+	z-index:999;
+}
+.popbox-table{
+	display:table;
+	width:100%;
+	height:100%;
+}
+.popbox-cell{
+	display:table-cell;
+	vertical-align:middle;
+	width:100%;
+	height:100%;
+	
+}
+.pb-panel,.pb-panel-sche{
+	display:none;
+}
+
+.schebtn{
+	cursor:pointer;
+}
+.schebtn:hover{
+	background-color:#484848;
+	color:#FFF;
+	-webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.pb-panel-sche, .pb-panel{
+	background-color: rgba(255,255,255,1.0);
+	border: 2px solid #3B893B;
+	border-radius: 10px;
+	padding: 40px;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	color:#000;
+}
+
+
+.table-sche img{
+	margin:10px 0;
+}
+
+.tableblock{
+	margin:0 auto;
+}
+.tableblock2{
+	width:100%;
+	margin:0 auto;
+}
+
+#about{
+	padding-top: 150px;
+	padding-bottom: 150px;
+	background-image:url(http://www.giee.ntu.edu.tw/portal/images/bgp-full.jpg);
+	background-size:cover;
+	background-position:center;
+    background-attachment: fixed;
+	width:100%;
+	position:relative;
+}
+
+#sche{
+	background-color: #030500;
+	background-size: cover;
+	background-position: center;
+	padding-bottom: 50px;
+	padding-top: 50px;
+	background-color: #000;    
+}
+#sche-overlay{
+	padding-bottom:100px;
+}
+
+#sign-up{
+	background-image:url(http://www.giee.ntu.edu.tw/portal//images/bgp-full-iot1.png);
+	background-position:center;
+    background-attachment: fixed;
+	width:100%;
+	position:relative;
+	padding-bottom: 450px;
+}
+
+#map{
+	margin-top: 200px;
+	padding-bottom: 450px;
+}
+
+#sponsor{
+	margin-top: 200px;
+	padding-bottom: 450px;
+	background-image:url(http://www.giee.ntu.edu.tw/portal/images/bgp-full.jpg);
+	background-size:cover;
+	background-position:center;
+    background-attachment: fixed;
+	width:100%;
+	position:relative;
+	color:#FFF;
+}
+
+td.content{
+	font-size:17px;
+	border:10px solid rgba(0, 0, 0, 0) !important;
+	color: #EEE;
+	background-color:#333;
+	padding: 10px;
+	margin: 10px;
+	-moz-background-clip: padding;     /* Firefox 3.6 */
+	-webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+	background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+
+td.content:hover{
+	font-size:22px;
+	-webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+td.time{	
+	width:30%;
+	line-height: 5 !important;
+	border:0px !important;
+	color: #EEE;
+	padding: 10px;
+	margin: 10px;
+	-moz-background-clip: padding;     /* Firefox 3.6 */
+	-webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+	background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+#shadow-box{
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+} 
+.vertical-div{
+	float: left;
+	width:33.333%;
+}
+.cont{
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	margin:auto auto;left:50%
+}
+
+.mybox{
+	height:250px;
+	vertical-align:middle;
+	position:relative;
+}

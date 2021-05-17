@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<script type="text/javascript">
+<!--  //隨機播放陣列中指定的圖檔
+        var jsImg = new Array("001.jpg","002.jpg","003.jpg","004.jpg","005.jpg");
+        //設定每兩秒執行一次randomImg() ，此行要在 function 之外
+        setInterval("randomImg()",3000);
+        function randomImg(){
+        //陣列的長度 * 介於0~1間數字 ，然後在取 floor 當照片索引值
+        var imgIndex = Math.floor(Math.random()*jsImg.length);
+        document.getElementById("my_div").innerHTML  = "<img src='"+jsImg[imgIndex]+"' width=200 height=200>";
+        }       
+-->
+</script>
+<script type="text/javascript">
+<!--  //循序播放陣列中指定的圖檔
+        var jsImg = new Array("images/camp/01.jpg"
+							 ,"images/camp/02.jpg"
+							 ,"images/camp/03.jpg"
+							 ,"images/camp/04.jpg"
+							 ,"images/camp/05.jpg"
+							 ,"images/camp/06.jpg"
+							 ,"images/camp/07.jpg"
+							 ,"images/camp/08.jpg"
+							 ,"images/camp/09.jpg"
+							 ,"images/camp/10.jpg"
+							 ,"images/camp/11.jpg"
+							 ,"images/camp/12.jpg"
+							 ,"images/camp/13.jpg"
+							 ,"images/camp/14.jpg"
+							 ,"images/camp/15.jpg"
+							 ,"images/camp/16.jpg"
+							 ,"images/camp/17.jpg"
+							 ,"images/camp/18.jpg"
+							 ,"images/camp/19.jpg"
+							 ,"images/camp/20.jpg"
+							 ,"images/camp/21.jpg"
+							 ,"images/camp/22.jpg"
+							 ,"images/camp/23.jpg"
+							 ,"images/camp/24.jpg"
+							 ,"images/camp/25.jpg"
+							 ,"images/camp/26.jpg"
+							 ,"images/camp/27.jpg"
+							 ,"images/camp/28.jpg"
+							 ,"images/camp/29.jpg"
+							 ,"images/camp/30.jpg"
+							 ,"images/camp/31.jpg"
+							 ,"images/camp/32.jpg"
+							 ,"images/camp/33.jpg"
+							 ,"images/camp/34.jpg"
+							 ,"images/camp/35.jpg"
+							 ,"images/camp/36.jpg"
+							 ,"images/camp/37.jpg"
+							 ,"images/camp/38.jpg"
+							 ,"images/camp/39.jpg"
+							 ,"images/camp/40.jpg"
+							 ,"images/camp/41.jpg"
+							 ,"images/camp/42.jpg"
+							 ,"images/camp/43.jpg"
+							 ,"images/camp/44.jpg"
+							 ,"images/camp/45.jpg"
+							 ,"images/camp/46.jpg"							 
+							 ,"images/camp/00.jpg"
+							 );
+        var jsImg_len = jsImg.length;  // 圖檔數量
+        // 要用另一個變數存，是不想在 function 中每次都要算陣列的大小
+        var i=2;                       //起始照片  2 為 003.jpg
+        //設定每3秒執行一次sequentialImg() ，此行要在 function 之外
+        setInterval("sequentialImg()",3000);
+        function sequentialImg(){  //循序播放
+            document.getElementById("my_div").innerHTML  = "<img src='"+jsImg[i]+"' width=800 height=500>";        
+                i++;
+                if(i>=jsImg_len)  i=0;
+        }
+-->
+</script>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>IC 夏令營 2020</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+    <link href="css/ics.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                        Menu <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand page-scroll menu-links" href="#page-top">
+                        <i class="fa fa-play-circle"></i> <span class="light">IC</span> Camp 2020
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll menu-links"  href="#about">簡介</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll menu-links"  href="#sche">活動行程</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll menu-links"  href="#sign-up">我要報名</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll menu-links"  href="#map">活動地點</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll menu-links"  href="#sponsor">關於我們</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>
+
+
+
+        <div class="popbox">
+          <div class="popbox-table">
+            <div class="popbox-cell">
+              <div class="container">
+                <div class="row">
+
+                  <div class="yang-panel pb-panel-sche col-lg-8 col-lg-offset-2 " style="background-color:rgba(49,172,165,0.39); border-color:#FFF; color:#FFF;">
+                    <h4 style="color:#FFF;"></h4>
+                    <h3 style="color:#FFF;">Nanya Corp. 南亞科技</h3>
+                    <h4 style="color:#EEE;">南亞簡介</h4>
+                    <div>
+
+                        &emsp;&emsp;南亞科技股份有限公司以成為最佳DRAM(動態隨機存取記憶體)之供應商為目標，強調以服務客戶為導向，透過與夥伴們緊密的合作，強化產品的研發與製造，進而提供客戶全方位產品及系統解決方案。<br>
+                        &emsp;&emsp;面對持續成長的利基型DRAM市場，南亞科技除了提供從128Mb到8Gb產品，更持續拓展產品多元化。主要的應用市場包括數位電視、機上盒(STB)、網通、平板電腦等智慧電子系統、車用及工規等產品。同時，為滿足大幅成長的行動與穿戴裝置市場需求，南亞科技更專注於研發及製造低功耗記憶體產品。<br>
+                        &emsp;&emsp;近年來，南亞科技積極經營利基型記憶體市場，專注於低功耗與客製化核心產品線的研發。在製程進度上，更導入20奈米製程技術，致力於生產DDR4和LPDDR4產品，期能進一步提升整體競爭力。南亞科技也將持續強化高附加價值利基型記憶體戰線與完美的客戶服務，強化本業營運績效，確保所有股東權益，創造企業永續經營之價值。<br>
+                        
+                        <div class="center100">
+                            <img src="images/nanya.jpg" width="300" alt="" style="margin:25px auto;display:block"/>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div >
+                    <h1 class="brand-heading" style="width=100%">IC Summer Camp</h1>
+                    <p class="intro-text">
+                        <h3>2020/08/18 ~ 2020/08/19</h3>
+                        <h4>NTU GIEE ICS</h4>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row" >
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>關於 IC 夏令營</h2>
+                <p>想對臺大ICS組有更多的認識嗎？覺得自己與IC設計一拍即合嗎？ 未來想往IC設計領域發展但還存有一絲遲疑嗎？2020 IC Summer Camp將帶你了解最新IC設計的研究趨勢，並解答你心中種種疑惑。駛向夢想的特快車，等待你的搭乘！歡迎有興趣的同學報名參加！</p>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2" >
+                <div style="background-color:rgba(255,255,255,0.2);padding:50px">
+                    <h3>關於台大電子所 ICS 組</h3>
+                    <p style="text-align:left"> &emsp;&emsp;「積體電路與系統組（ICS）」研究方向包括了多媒體系統晶片、通訊系統晶片、生醫系統晶片、以及使用數位/類比/混合/射頻電路的各式新應用。本組共有十八間實驗室進行不同領域之研究與發展。</p>
+
+                    <p style="text-align:left">&emsp;&emsp;依照研究屬性的不同，本組的研究性質可概分為數位積體電路設計及類比電路設計兩個大方向。然而以所謂「類比」、「數位」等字詞來分類實在過於簡略籠統，類比電路設計不見得就完全與與數位無關，而數位積體電路設計也非不用考慮類比電路的設計概念。故以下我們將就這兩個主要的研究方向做簡單的介紹。</p>
+
+                    <p style="text-align:left">&emsp;&emsp;數位積體電路設計這個名詞可能會讓大家誤會從事此方向的研究將成天與邏輯匣為伍，事實上邏輯的分析只佔了數位設計研究的一小部分。數位的研究領域主要包括多媒體信號的處理演算法與晶片製作、數位通信理論及通訊基頻晶片製作等。數位積體電路設計較著重於理論的分析及演算法的推導，最後才以ASIC晶片或者FPGA可程式化平台來驗證。畢業的研究生都將對通訊理論，信號處理及積體電路設計工具有著相當好的了解。</p>
+
+                    <p style="text-align:left">&emsp;&emsp;類比電路設計則著重於各式各樣的系統中類比或混合式積體電路的研究，也包括了電力電子積體電路。目前主要的研究領域包括：鎖相迴路、放大器、類比數位/數位類比轉換器等。除了將類比與數位邏輯共同設計以發揮電路更好效能的混合式積體電路設計、也著重於高頻通訊的射頻電路設計、高速光通訊積體電路設計以及綠能與車用電子等研究領域。通常一位研究生畢業之前都會具有獨立分析電路、設計晶片、完成量測的能力。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sche">
+        <div id="sche-overlay" class="container content-section text-center" >
+            <h2>活動時間表</h2>
+            <div class="tableblock2" style="text-align:center;background-color:white">
+                <div style="float:left;width:50%;">
+                    <table class="table table-sche">
+                        <tbody>
+                            <tr>
+                                <td class="time" style="background-color:rgba(0, 0, 0, 0);"></td>
+                                <td class="content" style="background-color:#000;font-weight:bold;color:#AAA;">Day 1 - 8/18</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">09:20</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td  class="time">&nbsp;</td>
+                                <td class="content" style="vertical-align:middle">報到</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">10:00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle">所長開幕致詞</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">10:10</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle">主題演講<br>．講題一 <br>聯發科技 梁伯嵩博士<br>．講題二 <br>ICS數位組/類比組介紹<br>數位: 吳安宇 教授<br> 類比: 李泰成 教授</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">11:50</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle"> 大合照 <br> 午餐交流/小組相見歡&nbsp;&nbsp;<i class="fa fa-cutlery" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">13:10</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                  <td class="content" style="vertical-align:middle">小組專題說明<br>林宗賢 老師<br></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">13:45</td>
+                                <td></td>
+                            </tr>
+                             <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">14:00</td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle">實驗室攤位巡禮<br>與臺大校園巡禮</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">17:30</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">18:00</td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle">學長姐晚餐交流&nbsp;&nbsp;<i class="fa fa-cutlery" aria-hidden="true"></i><br>各小組專案討論</td>
+                            </tr>
+							<tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">22:30</td>
+                                <td></td>
+                            </tr>
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div style="float:left;width:50%;">
+                    <table class="table table-sche" style="">
+                        <tbody>
+                            <tr>
+                                <td class="time" style="background-color:rgba(0, 0, 0, 0);"></td>
+                                <td class="content" style="background-color:#000;font-weight:bold;color:#AAA;">Day 2 - 8/19</td>
+                            </tr>
+                             <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">07:25</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">&nbsp;</td>
+                                <td class="content" style="vertical-align:middle">住宿同學退房與寄放行李</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">07:50</td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">08:00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time">&nbsp;</td>
+                                <td class="content" style="vertical-align:middle">集合搭車<br>前往南亞科&nbsp;&nbsp;<i class="fa fa-cutlery" aria-hidden="true"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">09:10</td>
+                                <td></td>
+                            </tr>
+                            <tr >
+                                <td class="time" style="line-height:29.08!important"><br></td>
+								<td class="sche-speech schebtn content" style="background-color:#818282;vertical-align:middle;" sid="yang">企業論壇<br>或<br>南亞科技參訪
+									<br>
+									<img  src="images/Nanya_logo.png" height = "200" width = "200" />
+									<br>
+									(將根據疫情狀況做適當調整與安排)
+								</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">13:00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                  <td class="content" style="vertical-align:middle">搭車返校</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">14:00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle">小組專題準備與彩排</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">15:00</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">15:10</td>
+                                
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle">小組專案發表暨老師講評</td>
+                            </tr>
+                            <tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">17:10</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="time"><br></td>
+                                <td class="content" style="vertical-align:middle">頒獎<br>領取證書賦歸</td>
+                            </tr>
+							<tr>
+                                <td style="width:30%;border-top:0px;line-height:0.5">17:30</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	   <!--  <section id="about" class="container content-section text-center">
+        <div class="row" >
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>講者介紹</h2>
+                <p></p>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2" >
+                <div style="background-color:rgba(255,255,255,0.2);padding:50px">
+                    <h3>TBD-講者一</h3>
+                    <p style="text-align:left"> &emsp;&emsp;XXX博士在XX系拿到學位...</p>
+                    <p style="text-align:left"> &emsp;&emsp;於 2002 年回台成立...</p>
+					<div class="center100">
+						<img src="images/speaker1.jpg" width="300" alt="" style="margin:25px auto;display:block"/>
+					</div>
+				</div>
+				
+                <div style="background-color:rgba(255,255,255,0.2);padding:50px">
+                    <h3>TBD-講者二</h3>
+                    <p style="text-align:left"> &emsp;&emsp;OOO博士在OO系拿到學位...</p>
+                    <p style="text-align:left"> &emsp;&emsp;於 2019 年回台成立...</p>
+					<div class="center100">
+						<img src="images/speaker2.jpg" width="300" alt="" style="margin:25px auto;display:block"/>
+					</div>
+			  </div>
+            </div>
+        </div>
+    </section> -->
+	
+	
+<!-- Download Section -->
+<section id="sign-up" class="content-section text-center">
+    <div class="sign-up-section">
+        <div class="container"  style="background-color:rgba(255,255,255,0.2);padding:50px">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>活動簡章</h2>
+                <div class="tableblock">
+                    <table class="table">
+                        <tbody>
+							<tr>
+								  <td align="right" ><p style="margin:5px">報名對象：</p></td>
+								  <td ><p style="margin:5px">全國大專院校大三大四學生，共計60人</p></td>
+							</tr>
+							<tr>
+								  <td align="right"><p style="margin:5px">報名費用：</p></td>
+								  <td ><p style="margin:5px">保證金新台幣 1,000 元整，全程參與者全額退還<br>(於錄取後三天內繳交)（含例假日）<br>
+								  如於時限內未繳交則取消資格<br>
+								  *已繳費者於日後無法參與，則不退還保證金<br>
+								若有特殊事由，可與主辦單位聯繫</p></td>
+							</tr>
+							<tr>
+								  <td align="right"><p style="margin:5px">住宿費用：</p></td>
+								  <td ><p style="margin:5px">
+									本次活動無強制住宿，但如需住宿者，<br>
+									需繳納新台幣1,000元住宿費<br>
+									住宿地點為捷絲旅台大尊賢館（兩人一室，兩小床）<br>
+									住宿期間須配合飯店相關防疫措施及營隊規範
+								  </p></td>
+							</tr>
+							<tr>
+								  <td align="right" style="vertical-align:middle"><p style="margin:5px">報名日期：</p></td>
+								  <td ><p style="margin:5px">開放報名日期：2020 年 6 月 1 日<br>
+									報名截止日期：2020 年 6 月 29 日 17:00 (額滿為止)<br>
+								<!--公告錄取學員：2019 年 7 月  3 日 (繳費期限：7 月 6日）<br>
+									公告備取學員：2019 年 7 月 10 日（繳費期限：7 月 13日）<br>-->
+
+									<!-- 錄取狀況皆已寄信通知<br>
+									(包含正取、備取及未錄取通知)<br>
+									若沒收到通知可以來信詢問<br> -->
+
+									</td></p>
+							</tr>
+							<tr>
+								  <td align="right"><p style="margin:5px">活動資訊：</p></td>
+								  <td ><p style="margin:5px">
+									8月18日(星期二)與8月19日(星期三)，共計兩天<br>
+									*8月19日為企業論壇或參訪<br>
+									（將根據疫情狀況做適當調整與安排）
+								  </p></td>
+							</tr>
+							
+							<tr>
+								  <td align="right"><p style="margin:5px">注意事項：</p></td>
+								  <td align="left"><p style="margin:5px">
+								  	1. 錄取通知將以電子信件方式通知，請學員依照信件<br>
+									　內容辦理相關報到事項。<br><br>
+									2. 本營隊活動時間為兩天一夜，學員可以選擇是否住<br>
+									　宿。欲住宿者，需繳納新台幣1000元住宿金，並簽<br>
+									　妥住宿切結書後方可入住。一旦訂房完成，恕不退<br>
+									　費，除有特殊原因可與主辦單位聯繫，不保證全額<br>
+									　退費。<br><br>
+									3. 為確保學員安全，需中途離營之必要者，皆須事先<br>
+									　簽妥離營切結書，並交給主辦單位後，方可離營。<br>
+									　學員離營後之行為及安全，本營隊恕無法負責。<br><br>
+									4. 主辦單位保留更改調整或取消本活動及各項細節之<br>
+									　權利。任何相關問題可寄信至<br>
+									　　　　　　ics.camp.2020@gmail.com<br>
+									　我們將盡快與您連絡。<br><br>
+									<img src="images/sample.jpg" height = "588" />
+                                  </p></td>
+                                  
+                                  
+                            </tr>
+                            <tr>
+                                <img src="./images/2020 IC Camp_POSTER_2_3.jpg" height = "400" />
+                                <p></p>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+				<!-- <a class="btn btn-default btn-lg" style = "color: gray; background-color: #a8a4a4; border:#a8a4a4;">
+					<font color="black">
+						2020報名網址
+					</font>
+				</a> -->
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://forms.gle/7LF8RFZrGVJQ5sv1A" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">2020報名網址</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section id="map" class="container content-section text-center">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2" style="margin-bottom:5%">            
+           <h2>活動地點</h2>
+       </div>
+   </div>
+
+   <div style="width:100%">
+    <div style="width:40%;height:300px;display:inline-block;margin-right:2.5%">  
+        <h3>臺灣大學 博理館</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d34018.215592463115!2d121.52923505140649!3d25.000222431698354!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x280b7e1a98cc05ca!2z6Ie654Gj5aSn5a245Y2a55CG6aSo!5e0!3m2!1szh-TW!2stw!4v1591000611031!5m2!1szh-TW!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div style="width:40%;height:300px;display:inline-block;margin-left:2.5%">
+        <h3>南亞科技</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.58285932144!2d121.41291901435494!3d25.04822664387638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7ba4cdc114f%3A0x672c8dbf10a1100f!2z5Y2X5Lqe56eR5oqA6IKh5Lu95pyJ6ZmQ5YWs5Y-4IOS4iUHlu6A!5e0!3m2!1szh-TW!2stw!4v1591000783483!5m2!1szh-TW!2stw" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+</div>
+
+</section> 
+
+
+<!-- Contact Section -->
+<section id="sponsor" class="content-section text-center">
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2" style="width:100%;margin:0px;">
+                <div class="vertical-div" style="width:50%">
+                    <h2>主辦單位</h2>
+                    <h3>國立臺灣大學<br>電子工程學研究所ICS組</h3>
+                    <div class="mybox">
+                        <img class="cont" src="images/ics.png" width="200" alt="" style="display:block;"/>
+                    </div>
+                    <p>若有任何報名或活動相關問題<br>請寄信至ics.camp.2020@gmail.com<br>我們將盡快與您連絡。</p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="mailto:ics.camp.2020@gmail.com" class="btn btn-default btn-lg" target="_blank" ><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Email</span></a>
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+                </div>
+                <div class="vertical-div" style="width:50%">
+                    <h2>協辦單位</h2>
+                    <h3 style="line-height:3">國立臺灣大學系統晶片中心</h3>
+                    <div class="mybox">
+                        <div class="cont" style="background-color:white; padding:5px; width:250px; margin:auto auto;">
+                            <img src="http://soc.ee.ntu.edu.tw/www/images/logo.png" style="width:200px;margin:25px auto;display:block"/>
+                        </div>
+                    </div>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="http://soc.ee.ntu.edu.tw/www/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">造訪網站</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2" style="width:100%;margin:0px;">
+                <div class="vertical-div"  style="width:50%">
+                    <h2>贊助廠商</h2>
+                    <h3 style="line-height:3">南亞科技 NANYA Tech</h3>
+                    <div class="mybox">
+                        <img class="cont" src="images/Nanya_logo.png" width="200" alt="" style="display:block"/>
+                    </div>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="https://www.nanya.com/tw/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">造訪網站</span></a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!--
+                <div class="vertical-div"  style="width:33%">
+                    <h2>贊助廠商</h2>
+                    <h3 style="line-height:3">TBD(聯詠科技?)</h3>
+                    <div class="mybox">
+                        <div class="cont" style="background-color:white; padding:5px; width:250px; margin:auto auto;">
+                            <img src="images/NOVATEK.jpg" style="width:200px;margin:25px auto;display:block"/>
+                        </div>
+                    </div>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="http://www.novatek.com.tw/index.asp?LC=TC" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">造訪網站</span></a>
+                        </li>
+                    </ul>
+				</div>
+                -->
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="sponsor" class="content-section text-center">
+    <h2>歷年照片</h2>
+	<body onload="sequentialImg();">
+	<!-- <body onload="randomImg();">  -->
+	<div id="my_div" ></div>
+	</body>
+	</HTML>
+	<br>
+	
+	<a href="https://drive.google.com/drive/folders/1stYdLPw1RCDRuIJ1O5b5XCVpe8oVjymb?usp=sharing" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-external-link fa-fw"></i> <span class="network-name">圖片連結</span></a>	
+	
+	
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <p>Copyright &copy; NTUGIEE 2020</p>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+
+<!-- Theme JavaScript -->
+<script src="js/grayscale.min.js"></script>
+<script src="js/ics.js"></script>
+
+</body>
+
+</html>
