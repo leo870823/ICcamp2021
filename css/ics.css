@@ -61,7 +61,8 @@
 #about{
 	padding-top: 150px;
 	padding-bottom: 150px;
-	background-image:url(http://www.giee.ntu.edu.tw/portal/images/bgp-full.jpg);
+	/* background-image:url(https://giee.ntu.edu.tw/images/bgp-full.jpg); */
+	background-image:url(../images/bgp-full.jpg); 
 	background-size:cover;
 	background-position:center;
     background-attachment: fixed;
@@ -82,7 +83,8 @@
 }
 
 #sign-up{
-	background-image:url(http://www.giee.ntu.edu.tw/portal//images/bgp-full-iot1.png);
+	/*background-image:url(https://giee.ntu.edu.tw/images/bgp-full-iot1.png);*/
+	background-image:url(../images/bgp-full-iot1.png);
 	background-position:center;
     background-attachment: fixed;
 	width:100%;
@@ -98,7 +100,8 @@
 #sponsor{
 	margin-top: 200px;
 	padding-bottom: 450px;
-	background-image:url(http://www.giee.ntu.edu.tw/portal/images/bgp-full.jpg);
+	/*background-image:url(https://giee.ntu.edu.tw/images/bgp-full.jpg);*/
+	background-image:url(../images/bgp-full.jpg);
 	background-size:cover;
 	background-position:center;
     background-attachment: fixed;
