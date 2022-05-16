@@ -1,4 +1,4 @@
-# [2021 IC summer camp website]
+# [2022 IC summer camp website]
 
 
 ## Getting Started
